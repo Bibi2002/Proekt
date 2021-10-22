@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <title>Dance-studio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <head>
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+          font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        header{
+          background-image: url(https://wallpaperaccess.com/full/1316356.jpg);
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+        }
+        ul{
+          float:right;
+          list-style-type: none;
+          margin-top: 25px;
+        }
+        ul li{
+          display: inline-block;
+        }
+        ul li a{
+          text-decoration: none;
+          color: #fff;
+          padding: 5px 20px;
+          border: 1px solid transparent;
+          transition: 0.6s ease;
+
+        }
+        .imm img{
+          margin-top: -90px;
+          float: left;
+         width: 100px;
+          height: auto;
+          border-radius: 50%;
+        }
+        ul li a:hover{
+          background-color:rgb(109, 68, 68);
+          color: #000;
+        }
+        ul li.active a{
+          background-color:rgb(109, 68, 68);
+          color:#000;
+        }
+        .main{
+          max-width: 1200px;
+          margin: auto;
+        }
+        .title{
+          position: absolute;
+          top:40%;
+          left:13%;
+          transition: translate(-50%,-50%);
+}
+.title h1{
+ 
+  color: #000;
+  font-size: 70px;
+}
+.soz{
+  position: absolute;
+  top: 80%;
+  font-size: 30px;
+}
+.imm{
+  position: absolute;
+  top:100px;
+}
+#team {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color:#555;
+}
+h2{
+  text-align: center;
+  color: #555 !important;
+  padding-bottom: 10px;
+}
+h2::after{
+  content: '';
+  background: #007bff;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+.profile-pic{
+  margin-top: 25px;
+}
+
+.profile-pic .img-box{
+  opacity: 1;
+  display:block;
+  position: relative;
+
+}
+.profile-pic .img-box img{
+  filter:grayscale(1);
+
+}
+.profile-pic .img-box img:hover{
+  filter:grayscale(0);
+  cursor: pointer;
+  }
+  .profile-pic h3{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #007bff !important;
+}
+.profile-pic h4{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+#promo{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(https://www.collab2.co.za/wp-content/uploads/2017/06/contact-us-background.jpg);
+  background-size: cover;
+  background-position:center;
+  color:#fff;
+  background-attachment: fixed;
+  text-align: center;
+  padding:100px;
+  font-family: sans-serif;
+  font-size: 38px;
+
+}
+
+#price{
+  padding:40px 0;
+  background: #efefef;
+
+}
+.single-price{
+  margin:10px auto;
+  display:inline;
+  float:left;
+  width:100%;
+  background-color:#fff;
+  transition: 0.5s;
+}
+.single-price:hover{
+  box-shadow: 0 2px 20px #333;
+}
+.price-head{
+  background-color: #2196f3;
+  display:inline;
+  float:left;
+  padding: 10px 5px;
+  text-align: center;
+  width:100%;
+}
+.price-head h3{
+  color:#fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.price-head p{
+  font-size: 25px;
+  color:#ccc;
+  font-weight: bold;
+  line-height: 30px;
+
+}
+#price span{
+  font-size:15px;
+}
+.price-content{
+  display:inline;
+  float:left;
+  width:100%;
+  padding: 0 15px;
+}
+ .price-content ul li{
+   border-bottom: 1px solid #efefef;
+   padding: 15px 10px;
+   list-style: none;
+ }
+ ul li:last-child{
+   border:none;
+
+ }
+ .price-button{
+   display:inline;
+   float:left;
+   padding:15px 15px 30px;
+   text-align:center;
+   width:100%;
+
+ }
+ .buy-btn{
+   background-color: #2196f3;
+   border-radius: 3px;
+   display:inline-block;
+   font-size: 18px;
+   padding: 15px 50px;
+   transition: 0.5s;
+ }
+ .buy-btn:hover{
+   border-color: 1px solid #fff;
+   background-color: #3f51b5;
+
+ }
+ a{
+   text-decoration: none !important;
+   color:#fff !important;
+
+
+ }
+ #contact{
+   background: #efefef;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   color:#777;
+
+ }
+ .contact-form{
+   padding:15px;
+
+ }
+ .form-control{
+   border-radius: 0 !important;
+   border: none !important;
+ }
+ ::placeholder{
+   color:#999 !important;
+    
+ }
+ .follow{
+   background:#fff;
+   padding:10px;
+   margin:15px;
+
+ }
+ .contact-info .bi{
+margin:10px;
+color:#007bff;
+font-weight: bold;
+
+ }
+ #footer{
+   background: #333;
+   color:#fff;
+   padding:12px;
+ }
+.bi-suit-heart{
+  margin:3px;
+  color:red;
+}
+      </style>
+    </head>
+    <body>
+      <header>
+        
+        <div class="main">
+          <div class="imm">
+  <img src = "https://i.dlpng.com/static/png/6733751_preview.png"  >
+
+</div>
+          <ul>
+            <li class ="active"><a href="#">HOME</a></li>
+            <li><a href="file:///C:/Users/%D0%91%D0%B8%D0%B1%D0%B8%D0%BD%D1%83%D1%80/Desktop/Project/about.html">ABOUT US</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+      
+      
+        <div class="title">
+          <h1>DANCE STUDIO</h1>
+        </div>
+        <div class ="soz">
+          <p class="logo4" style="font-style: italic;">"The comeback is always
+            stronger than the setback."</p>
+</div>
+</header> 
+<section id="team">
+  <h2>OUR TEAM</h2>
+  <div class="row">
+    <div class="col-md-3 profile-pic text-center">
+      <div class="img-box">
+        <img src="https://image.freepik.com/free-photo/ballroom-dance-coach_88340-3661.jpg" width="250px" height="300px" class="img-responsive">
+      </div>
+      <h3>Polina Andreeva</h3>
+      <h4>Ballroom dance coach</h4>
+      <p>Polina is a Candidate Master of Sports, S-class dancer, 
+        Champion of the Republic of Kazakhstan in sports ballroom dancing.
+      </p>
+    </div>
+    <div class="col-md-3 profile-pic text-center">
+      <div class="img-box">
+        <img src="http://goodhouse.kz/wp-content/uploads/2017/10/IMG_2901-683x1024.jpg" width="250px" height="300px" class="img-responsive">
+      </div>
+      <h3>Yeleuken Bibinur</h3>
+      <h4>Zumba trainer</h4>
+      <p>bibinur is a Candidate Master of Sports, S-class dancer, 
+        Champion of the Republic of Kazakhstan in sports ballroom dancing.
+      </p>
+    </div>
+    <div class="col-md-3 profile-pic text-center">
+      <div class="img-box">
+        <img src=" https://chto-takoe-lyubov.net/wp-content/uploads/2017/07/khoreograf-stikhi.jpg" width="250px" height="300px" class="img-responsive">
+      </div>
+      <h3>Aslan Arman</h3>
+      <h4>Salsa trainer</h4>
+      <p>Aslan is a Candidate Master of Sports, S-class dancer, 
+        Champion of the Republic of Kazakhstan in sports ballroom dancing.
+      </p>
+    </div>
+    <div class="col-md-3 profile-pic text-center">
+      <div class="img-box">
+        <img src="http://www.fonstola.ru/pic/201111/240x320/fonstola.ru-51671.jpg" width="250px" height="300px" class="img-responsive">
+      </div>
+      <h3>Mazulina Zhanbota</h3>
+      <h4>Hip Hop trainer</h4>
+      <p>Zhanbota is a Candidate Master of Sports, S-class dancer, 
+        Champion of the Republic of Kazakhstan in sports ballroom dancing.
+      </p>
+    </div>
+  </div>
+  
+</section>
+ <section id="promo">
+   <div class="container">
+    <p>Get free Domain Name and Web Hosting</p>
+    <a href="#" class="btn btn-primary">Contact Us</a>
+   </div>
+ </section>
+ 
+ <section id="price">
+   <div class="container">
+     <h2>Price Plan</h2>
+   <div class="row">
+     <div class="col-md-3">
+       <div class="single-price">
+         <div class="price-head">
+           <h3>Ballet</h3>
+           <p>$0/<span>month</span></p>
+
+         </div>
+         <div class="price-content">
+           <ul>
+
+             <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>drop in::$18.00</li>
+             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>daytime drop in::$15.00</li>
+             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>30 min class::$9.00</li>
+             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>flirt package::$90.00</li>
+           </ul>
+         </div>
+         <div class="price-button">
+           <a class="buy-btn" href="#">Join Free</a>
+         </div>
+       </div>
+     </div>
+     <div class="col-md-3">
+      <div class="single-price">
+        <div class="price-head">
+          <h3>Zumba</h3>
+          <p>$0/<span>month</span></p>
+
+        </div>
+        <div class="price-content">
+          <ul>
+
+            <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>drop in::$18.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>daytime drop in::$15.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>30 min class::$9.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>flirt package::$90.00</li>
+          </ul>
+        </div>
+        <div class="price-button">
+          <a class="buy-btn" href="#">Join Free</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="single-price">
+        <div class="price-head">
+          <h3>Hip Hop</h3>
+          <p>$0/<span>month</span></p>
+
+        </div>
+        <div class="price-content">
+          <ul>
+
+            <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>drop in::$18.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>daytime drop in::$15.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>30 min class::$9.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>flirt package::$90.00</li>
+          </ul>
+        </div>
+        <div class="price-button">
+          <a class="buy-btn" href="#">Join Free</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="single-price">
+        <div class="price-head">
+          <h3>Salsa</h3>
+          <p>$0/<span>month</span></p>
+
+        </div>
+        <div class="price-content">
+          <ul>
+
+            <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>drop in::$18.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>daytime drop in::$15.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>30 min class::$9.00</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+           </svg>flirt package::$90.00</li>
+          </ul>
+        </div>
+        <div class="price-button">
+          <a class="buy-btn" href="#">Join Free</a>
+        </div>
+      </div>
+    </div>
+   </div>
+   </div>
+  
+ </section>
+ <section id="contact">
+   <div class="container">
+     <h2>Get In Touch </h2>
+     <div class="row">
+       <div class="col-md-6">
+         <form class="contact-form">
+           <div class="form-group" style="margin-bottom: 10px;">
+             <input type="text" class="form-control"  placeholder="Your Name">
+           </div>
+           <div class="form-group" style="margin-bottom: 10px;">
+            <input type="number" class="form-control" placeholder="Phone Number">
+           </div>
+           <div class="form-group" style="margin-bottom: 10px;">
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          </div>
+<button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+
+         </form>
+       </div>
+       <div class="col-md-6 contact-info">
+         <div class="follow"><b>Address:</b><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg> XYZ Kaskelen Burasheva 1</div>
+          <div class="follow"><b>Phone:</b><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>  +7 777 564 8535</div>
+          <div class="follow"><b>Email:</b> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+          </svg> @dancing.studio@gmail.com</div>
+          <div class="follow"><label><b>Get Social:</b></label>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg></a>
+          <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+          </svg></a>
+          <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg></a>
+          <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg></a>
+    
+          </div>
+          
+       </div>
+     </div>
+   </div>
+ </section>,
+ <section id="footer">
+   <div class="container text-center">
+     <p>Made With by <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+      <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+    </svg> Love</p>
+   </div>
+ </section>
+
+  
+ 
+       
+      
+         </body>
+         </html>
